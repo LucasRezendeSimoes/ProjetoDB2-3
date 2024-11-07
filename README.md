@@ -4,6 +4,8 @@ Integrantes:
 - Lucas Rezende Simões      |RA: 24.122.028-4
 - Fernando Milani Venerando |RA: 24.122.063-1
 
+Projeto do semestre passado: https://github.com/LucasRezendeSimoes/ProjetoDB
+
 Como acessar o banco de dados:
 - Acesse o site workspace-preview.neo4j.io
 - Insira Instance01 no nome da instância 
@@ -13,4 +15,5 @@ Como acessar o banco de dados:
 - Insira 7UhO11QXzgCupJXDW-0xDlwFBUwsVEaDwIgCst-jEZ4 na senha
 - Conecte
 
-Queries
+Coleções e relações estão no arquivo Colecao.txt
+As queries para resolver os 5 itens pedidos estão em Queries.txt
