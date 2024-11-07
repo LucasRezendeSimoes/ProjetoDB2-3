@@ -18,3 +18,5 @@ Como acessar o banco de dados:
 Coleções e relações estão no arquivo Colecao.txt
 
 As queries para resolver os 5 itens pedidos estão em Queries.txt
+
+O banco de dados com as coleções e relações também está no arquivo Banco_com_dados.zip
