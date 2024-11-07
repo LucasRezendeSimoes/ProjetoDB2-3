@@ -16,4 +16,5 @@ Como acessar o banco de dados:
 - Conecte
 
 Coleções e relações estão no arquivo Colecao.txt
+
 As queries para resolver os 5 itens pedidos estão em Queries.txt
