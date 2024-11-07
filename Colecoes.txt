@@ -1,0 +1,56 @@
+//Coleções//
+
+Alunos{
+  ra:<int>
+  name:<string>
+  id_curso:<int>
+  tot_cred:<int>
+  semestre:<int>
+  formado:<boolean>
+  id_tcc:<int>
+  }
+Professores{
+  id:<int>
+  name:<string>
+  depart_id:<string>
+}
+Cursos{
+  id:<int>
+  name:<string>
+  coordenador:<int>
+}
+Disciplinas{
+  id:<int>
+  name:<string>
+  depart_id:<string>
+}
+Departamentos{
+  id:<string>
+  name:<string>
+  id_chefe:<int>
+}
+Formados{
+  ra:<int>
+  ano:<int>
+}
+TCC{
+  tcc_id:<int>
+  id_professor:<int>
+}
+
+//Relações//
+
+Alunos -[Form]-> Formados
+Alunos -[Hist_a]-> Disciplinas
+Alunos -[Hist_a]-> Cursos
+Alunos -[Grupo_TCC]-> TCC
+
+Professores -[Hist_p]-> Cursos
+Professores -[Hist_p]-> Disciplinas
+Professores -[Ensina]-> Disciplinas
+Professores -[Chefia]-> Departamentos
+Professores -[Coordena]-> TCC
+
+Cursos -[Matriz Curricular]-> Disciplinas
+
+Disciplinas -[Pertence]-> Departamentos
