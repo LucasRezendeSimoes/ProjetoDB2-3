@@ -1,0 +1,20 @@
+// 1. Histórico dos alunos com id, nome, semestre, ano e nota final da disciplina.
+MATCH (a:Alunos)-[h:Hist_a]->(d:Disciplinas)
+RETURN a.name as Nome, a.ra as RA, d.id as ID_disciplinas, d.name as Nome_disciplinas, h.semestre as Semestre, h.ano as Ano, h.nota as Nota
+
+// 2. Histórico de disciplinas ministradas por professores com id, semestre e ano
+MATCH (p:Professores)-[h:Hist_p]->(d:Disciplinas)
+RETURN p.name as Nome, p.id as ID, d.name as Nome_disciplina, d.id as ID_disciplina, h.semestre as Semestre, h.ano as Ano
+
+// 3. Todos os alunos formados com semestre e ano
+MATCH (a:Alunos) -[:Form]->(f:Formados)
+RETURN a.name as Nome, a.ra as RA, a.semestre as Semestre, f.ano as Ano
+
+// 4. Todos os professores que chefiam um departamento com o nome do departamento
+MATCH (p:Professores) -[:Chefia]-> (d:Departamentos)
+RETURN p.name as Nome, p.id as ID, d.name as Nome_departamento, d.id as ID_departamento
+
+// 5. Todos os grupos de TCC com coordenador
+MATCH (a:Alunos) -[:Grupo_TCC]-> (TCC) <-[:Coordena]-(p:Professores)
+RETURN a.name as Nome_aluno, a.ra as RA, a.id_tcc as Grupo, p.name as Nome_professor, p.id as ID_professor
+ORDER BY a.id_tcc
